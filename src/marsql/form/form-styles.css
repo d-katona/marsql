@@ -1,0 +1,27 @@
+@reference "../../app/globals.css";
+
+[data-slot="input"],
+[data-slot="input-group"],
+[data-slot="popover-trigger"] {
+    @apply rounded-[2px] h-6;
+}
+
+[data-slot="textarea"] {
+    @apply rounded-[2px];
+}
+
+.q-container,
+.q-actions {
+    [data-slot="button"] {
+        @apply h-6;
+    }
+
+    [data-slot="field-separator"] {
+        @apply my-1;
+    }
+}
+
+.shadcn-checkbox,
+.shadcn-switch {
+    @apply h-6;
+}

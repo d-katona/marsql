@@ -12,9 +12,26 @@
             "title": "All Marsql Components",
             "description": "Installs all Marsql components.",
             "registryDependencies": [
+                "button",
                 "input",
+                "input-group",
+                "field",
+                "calendar",
+                "popover",
+                "textarea",
+                "checkbox",
+                "switch",
+                "combobox",
+                "separator",
                 "d-katona/marsql/useStyle",
-                "d-katona/marsql/input"
+                "d-katona/marsql/calendar",
+                "d-katona/marsql/checkbox",
+                "d-katona/marsql/combobox",
+                "d-katona/marsql/form-styles",
+                "d-katona/marsql/form",
+                "d-katona/marsql/input",
+                "d-katona/marsql/submit",
+                "d-katona/marsql/switch"
             ],
             "files": []
         }

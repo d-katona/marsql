@@ -1,0 +1,115 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "items": [
+        {
+            "name": "useStyle",
+            "type": "registry:hook",
+            "files": [
+                {
+                    "path": "useStyle.jsx",
+                    "type": "registry:hook",
+                    "target": "~/src/marsql/form/useStyle.jsx"
+                }
+            ]
+        },
+        {
+            "name": "calendar",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Calendar.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/form/Calendar.jsx"
+                }
+            ]
+        },
+        {
+            "name": "checkbox",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Checkbox.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/form/Checkbox.jsx"
+                }
+            ]
+        },
+        {
+            "name": "combobox",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Combobox.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/form/Combobox.jsx"
+                }
+            ]
+        },
+        {
+            "name": "form",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Form.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/form/Form.jsx"
+                }
+            ]
+        },
+        {
+            "name": "input",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Input.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/form/Input.jsx"
+                }
+            ]
+        },
+        {
+            "name": "submit",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Submit.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/form/Submit.jsx"
+                }
+            ]
+        },
+        {
+            "name": "switch",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Switch.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/form/Switch.jsx"
+                }
+            ]
+        },
+        {
+            "name": "textarea",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Textarea.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/form/Textarea.jsx"
+                }
+            ]
+        },
+        {
+            "name": "form-styles",
+            "type": "registry:style",
+            "files": [
+                {
+                    "path": "form-styles.css",
+                    "type": "registry:style",
+                    "target": "~/src/marsql/form/form-styles.css"
+                }
+            ]
+        }
+    ]
+}
