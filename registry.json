@@ -3,6 +3,7 @@
     "name": "ui",
     "homepage": "https://github.com/d-katona/marsql",
     "include": [
+        "src/marsql/registry.json",
         "src/marsql/form/registry.json",
         "src/marsql/layout/registry.json",
         "src/marsql/hooks/registry.json",
@@ -47,7 +48,8 @@
                 "d-katona/marsql/use-navigation",
                 "d-katona/marsql/use-record",
                 "d-katona/marsql/use-session-storage",
-                "d-katona/marsql/http"
+                "d-katona/marsql/http",
+                "d-katona/marsql/styles"
             ],
             "files": []
         }

@@ -1,0 +1,16 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "items": [
+        {
+            "name": "styles",
+            "type": "registry:file",
+            "files": [
+                {
+                    "path": "styles.css",
+                    "type": "registry:file",
+                    "target": "~/src/marsql/styles.css"
+                }
+            ]
+        }
+    ]
+}
