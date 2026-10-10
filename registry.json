@@ -4,7 +4,8 @@
     "homepage": "https://github.com/d-katona/marsql",
     "include": [
         "src/marsql/form/registry.json",
-        "src/marsql/layout/registry.json"
+        "src/marsql/layout/registry.json",
+        "src/marsql/hooks/registry.json"
     ],
     "items": [
         {
@@ -39,7 +40,12 @@
                 "d-katona/marsql/container",
                 "d-katona/marsql/sticky",
                 "d-katona/marsql/table-index",
-                "d-katona/marsql/title"
+                "d-katona/marsql/title",
+                "d-katona/marsql/use-debounce",
+                "d-katona/marsql/use-debounce-form",
+                "d-katona/marsql/use-navigation",
+                "d-katona/marsql/use-record",
+                "d-katona/marsql/use-session-storage"
             ],
             "files": []
         }

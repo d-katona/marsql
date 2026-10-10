@@ -1,0 +1,60 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "items": [
+        {
+            "name": "use-debounce",
+            "type": "registry:hook",
+            "files": [
+                {
+                    "path": "useDebounce.jsx",
+                    "type": "registry:hook",
+                    "target": "~/src/marsql/hooks/useDebounce.jsx"
+                }
+            ]
+        },
+        {
+            "name": "use-debounce-form",
+            "type": "registry:hook",
+            "files": [
+                {
+                    "path": "useDebounceForm.jsx",
+                    "type": "registry:hook",
+                    "target": "~/src/marsql/hooks/useDebounceForm.jsx"
+                }
+            ]
+        },
+        {
+            "name": "use-navigation",
+            "type": "registry:hook",
+            "files": [
+                {
+                    "path": "useNavigation.jsx",
+                    "type": "registry:hook",
+                    "target": "~/src/marsql/hooks/useNavigation.jsx"
+                }
+            ]
+        },
+        {
+            "name": "use-record",
+            "type": "registry:hook",
+            "files": [
+                {
+                    "path": "useRecord.jsx",
+                    "type": "registry:hook",
+                    "target": "~/src/marsql/hooks/useRecord.jsx"
+                }
+            ]
+        },
+        {
+            "name": "use-session-storage",
+            "type": "registry:hook",
+            "files": [
+                {
+                    "path": "useSessionStorage.jsx",
+                    "type": "registry:hook",
+                    "target": "~/src/marsql/hooks/useSessionStorage.jsx"
+                }
+            ]
+        }
+    ]
+}
