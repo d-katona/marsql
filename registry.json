@@ -39,6 +39,7 @@
                 "d-katona/marsql/input",
                 "d-katona/marsql/submit",
                 "d-katona/marsql/switch",
+                "d-katona/marsql/textarea",
                 "d-katona/marsql/actions",
                 "d-katona/marsql/block",
                 "d-katona/marsql/container",
