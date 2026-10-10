@@ -1,7 +1,7 @@
 import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
-import sql from "@/lib/sql";
-import { getFirebaseAuth } from "@/lib/login";
+import sql from "./sql";
+import getFirebaseAuth from "./firebase";
 import loginAction from "@/lib/loginAction";
 
 export default async function withUser(options, cb) {

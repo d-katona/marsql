@@ -11,6 +11,28 @@
                     "target": "~/src/marsql/api/withUser.js"
                 }
             ]
+        },
+        {
+            "name": "firebase",
+            "type": "registry:file",
+            "files": [
+                {
+                    "path": "firebase.js",
+                    "type": "registry:file",
+                    "target": "~/src/marsql/api/firebase.js"
+                }
+            ]
+        },
+        {
+            "name": "sql",
+            "type": "registry:file",
+            "files": [
+                {
+                    "path": "sql.js",
+                    "type": "registry:file",
+                    "target": "~/src/marsql/api/sql.js"
+                }
+            ]
         }
     ]
 }
