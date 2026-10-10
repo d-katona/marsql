@@ -2,6 +2,7 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import sql from "@/lib/sql";
 import { getFirebaseAuth } from "@/lib/login";
+import loginAction from "@/lib/loginAction";
 
 export default async function withUser(options, cb) {
     const auth = getFirebaseAuth();
@@ -21,23 +22,14 @@ export default async function withUser(options, cb) {
         return NextResponse.json({}, { status: 401, statusText: e.message });
     }
 
-    /*
     try {
-        // Never create user here, that will be taken care of in the login flow
-        [user] = await sql`
-            select * from auth.users
-            where email = ${identity.email}
-            limit 1`;
-        if (!user || !user.active) throw new Error;
+        user = await loginAction();
     } catch (e) {
         return NextResponse.json({}, { status: 401, statusText: 'No user found!' });
     }
-*/
 
-    let unit_id = null;
     let body;
-
-
+    let unit_id = null;
     if (options.request) {
         unit_id = options.request.headers.get('q_unit') || null;
         try {
