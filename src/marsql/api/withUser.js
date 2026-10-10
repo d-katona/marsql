@@ -2,7 +2,7 @@ import { cookies } from "next/headers";
 import { NextResponse } from "next/server";
 import sql from "./sql";
 import getFirebaseAuth from "./firebase";
-import loginAction from "@/lib/loginAction";
+import loginVerifyAction from "@/lib/login-verify-action";
 
 export default async function withUser(options, cb) {
     const auth = getFirebaseAuth();
@@ -23,7 +23,7 @@ export default async function withUser(options, cb) {
     }
 
     try {
-        user = await loginAction(identity);
+        user = await loginVerifyAction(identity);
     } catch (e) {
         return NextResponse.json({}, { status: 401, statusText: 'No user found!' });
     }

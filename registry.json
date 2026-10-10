@@ -62,7 +62,8 @@
                 "d-katona/marsql/readme",
                 "d-katona/marsql/with-user",
                 "d-katona/marsql/firebase",
-                "d-katona/marsql/sql"
+                "d-katona/marsql/sql",
+                "d-katona/marsql/login"
             ]
         },
         {

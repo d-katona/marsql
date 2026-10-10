@@ -33,6 +33,17 @@
                     "target": "~/src/marsql/api/sql.js"
                 }
             ]
+        },
+        {
+            "name": "login",
+            "type": "registry:file",
+            "files": [
+                {
+                    "path": "login.js",
+                    "type": "registry:file",
+                    "target": "~/src/marsql/api/login.js"
+                }
+            ]
         }
     ]
 }
