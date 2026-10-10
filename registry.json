@@ -12,6 +12,7 @@
             "title": "All Marsql Components",
             "description": "Installs all Marsql components.",
             "registryDependencies": [
+                "input",
                 "d-katona/marsql/useStyle",
                 "d-katona/marsql/input"
             ],
