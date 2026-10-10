@@ -23,7 +23,7 @@ export default async function withUser(options, cb) {
     }
 
     try {
-        user = await loginAction();
+        user = await loginAction(identity);
     } catch (e) {
         return NextResponse.json({}, { status: 401, statusText: 'No user found!' });
     }
