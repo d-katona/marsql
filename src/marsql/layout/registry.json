@@ -1,0 +1,71 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "items": [
+        {
+            "name": "actions",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Actions.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/layout/Actions.jsx"
+                }
+            ]
+        },
+        {
+            "name": "block",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Block.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/layout/Block.jsx"
+                }
+            ]
+        },
+        {
+            "name": "container",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Container.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/layout/Container.jsx"
+                }
+            ]
+        },
+        {
+            "name": "sticky",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Sticky.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/layout/Sticky.jsx"
+                }
+            ]
+        },
+        {
+            "name": "table-index",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "TableIndex.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/layout/TableIndex.jsx"
+                }
+            ]
+        },
+        {
+            "name": "title",
+            "type": "registry:ui",
+            "files": [
+                {
+                    "path": "Title.jsx",
+                    "type": "registry:ui",
+                    "target": "~/src/marsql/layout/Title.jsx"
+                }
+            ]
+        }
+    ]
+}

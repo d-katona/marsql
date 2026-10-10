@@ -3,7 +3,8 @@
     "name": "ui",
     "homepage": "https://github.com/d-katona/marsql",
     "include": [
-        "src/marsql/form/registry.json"
+        "src/marsql/form/registry.json",
+        "src/marsql/layout/registry.json"
     ],
     "items": [
         {
@@ -23,6 +24,7 @@
                 "switch",
                 "combobox",
                 "separator",
+                "table",
                 "d-katona/marsql/useStyle",
                 "d-katona/marsql/calendar",
                 "d-katona/marsql/checkbox",
@@ -31,7 +33,13 @@
                 "d-katona/marsql/form",
                 "d-katona/marsql/input",
                 "d-katona/marsql/submit",
-                "d-katona/marsql/switch"
+                "d-katona/marsql/switch",
+                "d-katona/marsql/actions",
+                "d-katona/marsql/block",
+                "d-katona/marsql/container",
+                "d-katona/marsql/sticky",
+                "d-katona/marsql/table-index",
+                "d-katona/marsql/title"
             ],
             "files": []
         }
