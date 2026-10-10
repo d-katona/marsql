@@ -1,0 +1,21 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "name": "ui",
+    "homepage": "https://github.com/d-katona/marsql",
+    "include": [
+        "src/marsql/ui/registry.json"
+    ],
+    "items": [
+        {
+            "name": "all",
+            "type": "registry:block",
+            "title": "All Marsql Components",
+            "description": "Installs all Marsql components.",
+            "registryDependencies": [
+                "d-katona/marsql/useStyle",
+                "d-katona/marsql/input"
+            ],
+            "files": []
+        }
+    ]
+}
