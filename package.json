@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "git": "git add . && git commit -m '.'"
+    "git": "git add . && git commit -m '.' && git push"
   },
   "dependencies": {
     "@base-ui/react": "^1.9.0",
