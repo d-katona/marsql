@@ -102,11 +102,11 @@
         },
         {
             "name": "form-styles",
-            "type": "registry:style",
+            "type": "registry:file",
             "files": [
                 {
                     "path": "form-styles.css",
-                    "type": "registry:style",
+                    "type": "registry:file",
                     "target": "~/src/marsql/form/form-styles.css"
                 }
             ]
