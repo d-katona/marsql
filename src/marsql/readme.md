@@ -11,7 +11,7 @@ import { Toaster } from "sonner";
 const googleSansFlex = Google_Sans_Flex({
   subsets: ["latin"],
   variable: "--font-google-sans-flex",
-  fallback: ["system-ui", "Arial", "sans-serif"],
+  fallback: ["system-ui", "sans-serif"],
   adjustFontFallback: false
 });
 const googleSansCode = Google_Sans_Code({
