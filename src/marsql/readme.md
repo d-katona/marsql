@@ -1,6 +1,9 @@
 
 ```javascript
 
+import "@/marsql/styles.css"
+import "@/marsql/form/form-styles.css"
+
 import { Google_Sans_Flex } from "next/font/google";
 import { Google_Sans_Code } from "next/font/google";
 import { Toaster } from "sonner";
