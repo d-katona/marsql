@@ -5,7 +5,8 @@
     "include": [
         "src/marsql/form/registry.json",
         "src/marsql/layout/registry.json",
-        "src/marsql/hooks/registry.json"
+        "src/marsql/hooks/registry.json",
+        "src/marsql/client/registry.json"
     ],
     "items": [
         {
@@ -45,7 +46,8 @@
                 "d-katona/marsql/use-debounce-form",
                 "d-katona/marsql/use-navigation",
                 "d-katona/marsql/use-record",
-                "d-katona/marsql/use-session-storage"
+                "d-katona/marsql/use-session-storage",
+                "d-katona/marsql/http"
             ],
             "files": []
         }
