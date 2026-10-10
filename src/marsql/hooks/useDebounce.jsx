@@ -1,11 +1,18 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useForm, useSelector } from "@tanstack/react-form";
+import { useEffect, useRef, useState } from "react";
 
-export default function useDebounce(value, setStorage, delay = 250) {
-    const [debounced, setDebounced] = useState(value);
+export default function useDebounce(setStorage, storage, delay = 150) {
+    const hydrated = useRef(false);
+    const [debounced, setDebounced] = useState(storage);
+
+    const form = useForm();
+    const value = useSelector(form.store, (state) => state.values);
 
     useEffect(() => {
+        if (!hydrated.current) return;
+
         const timer = setTimeout(() => {
             setDebounced(value);
             setStorage(value);
@@ -14,5 +21,10 @@ export default function useDebounce(value, setStorage, delay = 250) {
         return () => clearTimeout(timer);
     }, [value, delay, setStorage]);
 
-    return debounced;
+    useEffect(() => {
+        hydrated.current = true;
+        form.reset(storage)
+    }, [])
+
+    return [form, debounced];
 }

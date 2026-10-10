@@ -24,6 +24,17 @@
             ]
         },
         {
+            "name": "use-submit",
+            "type": "registry:hook",
+            "files": [
+                {
+                    "path": "useSubmit.jsx",
+                    "type": "registry:hook",
+                    "target": "~/src/marsql/hooks/useSubmit.jsx"
+                }
+            ]
+        },
+        {
             "name": "use-navigation",
             "type": "registry:hook",
             "files": [
