@@ -7,14 +7,13 @@
         "src/marsql/form/registry.json",
         "src/marsql/layout/registry.json",
         "src/marsql/hooks/registry.json",
-        "src/marsql/client/registry.json"
+        "src/marsql/client/registry.json",
+        "src/marsql/api/registry.json"
     ],
     "items": [
         {
-            "name": "all",
+            "name": "basic",
             "type": "registry:block",
-            "title": "All Marsql Components",
-            "description": "Installs all Marsql components.",
             "registryDependencies": [
                 "button",
                 "input",
@@ -29,7 +28,13 @@
                 "separator",
                 "table",
                 "sonner",
-                "dialog",
+                "dialog"
+            ]
+        },
+        {
+            "name": "own",
+            "type": "registry:block",
+            "registryDependencies": [
                 "d-katona/marsql/useStyle",
                 "d-katona/marsql/calendar",
                 "d-katona/marsql/checkbox",
@@ -54,9 +59,17 @@
                 "d-katona/marsql/use-session-storage",
                 "d-katona/marsql/http",
                 "d-katona/marsql/styles",
-                "d-katona/marsql/readme"
-            ],
-            "files": []
+                "d-katona/marsql/readme",
+                "d-katona/marsql/with-user"
+            ]
+        },
+        {
+            "name": "all",
+            "type": "registry:block",
+            "registryDependencies": [
+                "d-katona/marsql/basic",
+                "d-katona/marsql/own"
+            ]
         }
     ]
 }

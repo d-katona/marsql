@@ -13,12 +13,14 @@ export default function useSubmit(setStorage, storage) {
 
     useEffect(() => {
         setStorage(debounced);
-    }, [debounced])
+    }, [debounced, setStorage])
+    //setStorage added
 
     useEffect(() => {
         hydrated.current = true;
         form.reset(storage)
-    }, [])
+    }, [form, storage])
+    // form & storage added
 
     return [form, debounced];
 }

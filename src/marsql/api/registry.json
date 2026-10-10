@@ -1,0 +1,16 @@
+{
+    "$schema": "https://ui.shadcn.com/schema/registry.json",
+    "items": [
+        {
+            "name": "with-user",
+            "type": "registry:file",
+            "files": [
+                {
+                    "path": "withUser.js",
+                    "type": "registry:file",
+                    "target": "~/src/marsql/api/withUser.js"
+                }
+            ]
+        }
+    ]
+}

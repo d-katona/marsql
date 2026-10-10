@@ -24,7 +24,8 @@ export default function useDebounce(setStorage, storage, delay = 150) {
     useEffect(() => {
         hydrated.current = true;
         form.reset(storage)
-    }, [])
+    }, [form, storage])
+    // form & storage added
 
     return [form, debounced];
 }
