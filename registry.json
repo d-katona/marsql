@@ -48,6 +48,7 @@
                 "d-katona/marsql/title",
                 "d-katona/marsql/use-debounce",
                 "d-katona/marsql/use-debounce-form",
+                "d-katona/marsql/use-submit",
                 "d-katona/marsql/use-navigation",
                 "d-katona/marsql/use-record",
                 "d-katona/marsql/use-session-storage",
