@@ -2,6 +2,17 @@
     "$schema": "https://ui.shadcn.com/schema/registry.json",
     "items": [
         {
+            "name": "readme",
+            "type": "registry:file",
+            "files": [
+                {
+                    "path": "readme.md",
+                    "type": "registry:file",
+                    "target": "~/src/marsql/readme.md"
+                }
+            ]
+        },
+        {
             "name": "styles",
             "type": "registry:file",
             "files": [

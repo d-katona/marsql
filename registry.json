@@ -28,6 +28,8 @@
                 "combobox",
                 "separator",
                 "table",
+                "sonner",
+                "dialog",
                 "d-katona/marsql/useStyle",
                 "d-katona/marsql/calendar",
                 "d-katona/marsql/checkbox",
@@ -49,7 +51,8 @@
                 "d-katona/marsql/use-record",
                 "d-katona/marsql/use-session-storage",
                 "d-katona/marsql/http",
-                "d-katona/marsql/styles"
+                "d-katona/marsql/styles",
+                "d-katona/marsql/readme"
             ],
             "files": []
         }
