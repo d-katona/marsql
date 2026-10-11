@@ -6,7 +6,7 @@ import { useEffect, useRef, useState } from "react";
 import { POST } from "../client/http";
 import useSessionStorage from "./useSessionStorage";
 
-export default function useDebounceData(storageKey, queryKey, url, delay = 150) {
+export default function useDebounceData(storageKey, queryKey, url, select, delay = 150) {
     const { storage, setStorage } = useSessionStorage(storageKey);
 
     const hydrated = useRef(false);
@@ -37,7 +37,8 @@ export default function useDebounceData(storageKey, queryKey, url, delay = 150) 
         queryFn: ({ queryKey, signal }) => {
             const debounced = queryKey.at(-1);
             return POST(url, debounced, signal)
-        }
+        },
+        ...(select && { select })
     })
 
 

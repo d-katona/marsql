@@ -41,7 +41,8 @@ export default function Input({
                             name={field.name}
                             value={value ?? ""}
                             onBlur={field.handleBlur}
-                            onChange={(e) => field.handleChange(e.target.value)}
+                            // value or null back to the form, so zod can handle null in the API at least, test client!
+                            onChange={(e) => field.handleChange(e.target.value || null)}
                             aria-invalid={!meta.isValid}
                             autoComplete="off"
                             className={clsx(uppercase && "uppercase", tabular && "tabular-nums", mono && "font-mono")}
