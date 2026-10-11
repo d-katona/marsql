@@ -16,6 +16,7 @@ export default function useRecord(
     const { data, isFetching, isSuccess, refetch } = useQuery({
         queryKey,
         queryFn,
+        gcTime: 0
     })
 
     useEffect(() => {

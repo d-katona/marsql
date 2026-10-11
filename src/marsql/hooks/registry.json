@@ -66,6 +66,17 @@
                     "target": "~/src/marsql/hooks/useSessionStorage.jsx"
                 }
             ]
+        },
+        {
+            "name": "use-record-form",
+            "type": "registry:hook",
+            "files": [
+                {
+                    "path": "useRecordForm.jsx",
+                    "type": "registry:hook",
+                    "target": "~/src/marsql/hooks/useRecordForm.jsx"
+                }
+            ]
         }
     ]
 }

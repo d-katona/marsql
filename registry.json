@@ -57,6 +57,7 @@
                 "d-katona/marsql/use-navigation",
                 "d-katona/marsql/use-record",
                 "d-katona/marsql/use-session-storage",
+                "d-katona/marsql/use-record-form",
                 "d-katona/marsql/http",
                 "d-katona/marsql/styles",
                 "d-katona/marsql/readme",
