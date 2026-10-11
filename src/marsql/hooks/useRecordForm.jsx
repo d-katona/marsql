@@ -21,19 +21,22 @@ export default function useRecordForm(
         ...(schema && { validators: { onSubmit: schema } })
     })
 
-    const { data, isFetching, isSuccess, refetch } = useQuery({
+    const { data, isFetching, isSuccess, refetch, isError } = useQuery({
         queryKey,
         queryFn,
         gcTime: 0
     })
 
     useEffect(() => {
+        if (isError) {
+            return router.replace(join(path, ".."))
+        }
         if (!data && isSuccess) {
             toast.warning("Record not found!", { position: "top-center" });
             return router.replace(join(path, ".."))
         }
         if (data) form.reset(data);
-    }, [data, isSuccess, path, form, router])
+    }, [data, isSuccess, path, form, router, isError])
 
     return { form, data, isSuccess, isFetching, refetch }
 }

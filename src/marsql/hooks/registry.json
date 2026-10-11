@@ -77,6 +77,17 @@
                     "target": "~/src/marsql/hooks/useRecordForm.jsx"
                 }
             ]
+        },
+        {
+            "name": "use-debounce-data",
+            "type": "registry:hook",
+            "files": [
+                {
+                    "path": "useDebounceData.jsx",
+                    "type": "registry:hook",
+                    "target": "~/src/marsql/hooks/useDebounceData.jsx"
+                }
+            ]
         }
     ]
 }

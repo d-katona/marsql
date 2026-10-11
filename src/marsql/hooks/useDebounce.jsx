@@ -15,7 +15,7 @@ export default function useDebounce(setStorage, storage, delay = 150) {
 
         const timer = setTimeout(() => {
             setDebounced(value);
-            setStorage(value);
+            if (setStorage) setStorage(value);
         }, delay);
 
         return () => clearTimeout(timer);
