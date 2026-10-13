@@ -13,7 +13,7 @@ export async function login(request) {
         const identity = await auth.verifyIdToken(token);
 
         try {
-            user = await loginAction(identity);
+            user = await loginAction({ identity, sql, body });
         } catch (e) {
             return NextResponse.json({}, { status: 401, statusText: 'Inactive User' });
         }
