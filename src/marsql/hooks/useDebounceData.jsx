@@ -1,16 +1,16 @@
 "use client";
 
 import { useForm, useSelector } from "@tanstack/react-form";
-import { useQuery } from "@tanstack/react-query";
+import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { useEffect, useRef, useState } from "react";
 import { POST } from "../client/http";
 import useSessionStorage from "./useSessionStorage";
 
-export default function useDebounceData(storageKey, queryKey, url, select, delay = 150) {
+export default function useDebounceData(storageKey, queryKey, url, select, storageOverride, delay = 150) {
     const { storage, setStorage } = useSessionStorage(storageKey);
 
     const hydrated = useRef(false);
-    const [debounce, setDebounce] = useState(storage);
+    const [debounce, setDebounce] = useState(storageOverride ?? storage);
 
     const form = useForm();
     const value = useSelector(form.store, (state) => state.values);
@@ -28,8 +28,8 @@ export default function useDebounceData(storageKey, queryKey, url, select, delay
 
     useEffect(() => {
         hydrated.current = true;
-        form.reset(storage)
-    }, [form, storage])
+        form.reset(storageOverride ?? storage)
+    }, [form, storage, storageOverride])
     // form & storage added
 
     const { data } = useQuery({
@@ -38,7 +38,8 @@ export default function useDebounceData(storageKey, queryKey, url, select, delay
             const debounced = queryKey.at(-1);
             return POST(url, debounced, signal)
         },
-        ...(select && { select })
+        ...(select && { select }),
+        placeholderData: keepPreviousData
     })
 
 

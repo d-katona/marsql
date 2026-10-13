@@ -25,10 +25,11 @@ export default async function withUser(options, cb) {
     try {
         user = await loginVerifyAction(identity);
     } catch (e) {
-        return NextResponse.json({}, { status: 401, statusText: 'No user found!' });
+        return NextResponse.json({}, { status: 401, statusText: e.message ?? 'No user found!' });
     }
 
     let body;
+    let slug;
     let unit_id = null;
     if (options.request) {
         unit_id = options.request.headers.get('q_unit') || null;
@@ -39,6 +40,10 @@ export default async function withUser(options, cb) {
         }
     }
 
+    if (options.params) {
+        const params = await params;
+        slug = params?.slug;
+    }
 
     let trx;
     const { trx: useTransaction } = options;
@@ -51,7 +56,7 @@ export default async function withUser(options, cb) {
         }
 
         // General error catcher for all error coming from the callback
-        const res = await cb({ user, user_id: user._id, unit_id, sql, trx, body });
+        const res = await cb({ user, user_id: user._id, unit_id, sql, trx, body, slug });
         if (useTransaction) await trx`COMMIT`;
 
         return NextResponse.json(res);
