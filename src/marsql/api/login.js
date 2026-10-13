@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 import getFirebaseAuth from "./firebase";
 import loginAction from "@/lib/login-action";
+import sql from "./sql";
 
 export async function login(request) {
     let user;
@@ -30,7 +31,7 @@ export async function login(request) {
             maxAge: 60 * 60 * 24 * 5,
         });
 
-        return NextResponse.json({ email: user.email });
+        return NextResponse.json(user);
     }
     catch (e) {
         return NextResponse.json({}, { status: 500, statusText: e.message });
