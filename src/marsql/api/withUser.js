@@ -23,7 +23,7 @@ export default async function withUser(options, cb) {
     }
 
     try {
-        user = await loginVerifyAction(identity);
+        user = await loginVerifyAction({ sql, identity, options });
     } catch (e) {
         return NextResponse.json({}, { status: 401, statusText: e.message ?? 'No user found!' });
     }
@@ -41,7 +41,7 @@ export default async function withUser(options, cb) {
     }
 
     if (options.params) {
-        const params = await params;
+        const params = await options.params;
         slug = params?.slug;
     }
 
