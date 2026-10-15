@@ -4,7 +4,6 @@ let unit_id;
 
 export function registerUnit(unit) {
     unit_id = unit;
-
 }
 
 function composeHeader() {
@@ -15,16 +14,16 @@ function composeHeader() {
     }
 }
 
+function errorHandler(req) {
+    toast.error(`Application Error - Status ${req.status}`, { position: "top-center", description: req.statusText });
+    throw new Error(req.statusText);
+}
+
 export async function GET(url) {
     composeHeader();
     const req = await fetch(url, { ...(composeHeader()) });
 
-    if (!req.ok) {
-        // throw new Error(await req.text());
-        toast.error(`Application Error - Status ${req.status}`, { position: "top-center", description: req.statusText });
-        throw new Error;
-        return null;
-    }
+    if (!req.ok) errorHandler(req);
 
     return req.json();
 }
@@ -38,13 +37,7 @@ export async function POST(url, body, signal) {
         ...(composeHeader())
     })
 
-    if (!req.ok) {
-        toast.error(`Application Error - Status ${req.status}`, { position: "top-center", description: req.statusText });
-        throw new Error;
-
-        return null;
-        throw new Error(await req.text());
-    }
+    if (!req.ok) errorHandler(req);
 
     return req.json();
 }
@@ -58,13 +51,7 @@ export async function PUT(url, body, signal) {
         ...(composeHeader())
     })
 
-    if (!req.ok) {
-        toast.error(`Application Error - Status ${req.status}`, { position: "top-center", description: req.statusText });
-        throw new Error;
-
-        return null;
-        throw new Error(await req.text());
-    }
+    if (!req.ok) errorHandler(req);
 
     return req.json();
 }
@@ -76,13 +63,7 @@ export async function DELETE(url) {
         ...(composeHeader())
     })
 
-    if (!req.ok) {
-        toast.error(`Application Error - Status ${req.status}`, { position: "top-center", description: req.statusText });
-        throw new Error;
-
-        return null;
-        throw new Error(await req.text());
-    }
+    if (!req.ok) errorHandler(req);
 
     return req.json();
 }
@@ -93,14 +74,8 @@ export async function MULTIPART(url, form) {
         body: form,
         ...(composeHeader())
     })
-    console.warn(req.ok);
-    if (!req.ok) {
-        toast.error(`Application Error - Status ${req.status}`, { position: "top-center", description: req.statusText });
-        throw new Error;
 
-        return null;
-        throw new Error(await req.text());
-    }
+    if (!req.ok) errorHandler(req);
 
     return req.json();
 }

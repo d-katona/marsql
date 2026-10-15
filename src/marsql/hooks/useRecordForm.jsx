@@ -16,9 +16,10 @@ export default function useRecordForm(
     const router = useRouter();
     const path = usePathname();
 
+    // was onSubmit, but if inputs are aligned with the state, then onChange is fine
     const form = useForm({
         onSubmit: ({ value }) => submit(value),
-        ...(schema && { validators: { onSubmit: schema } })
+        ...(schema && { validators: { onChange: schema } })
     })
 
     const { data, isFetching, isSuccess, refetch, isError } = useQuery({

@@ -32,7 +32,7 @@ export default function useDebounceData(storageKey, queryKey, url, select, stora
     }, [form, storage, storageOverride])
     // form & storage added
 
-    const { data } = useQuery({
+    const { data, isFetching } = useQuery({
         queryKey: [...queryKey, debounce],
         queryFn: ({ queryKey, signal }) => {
             const debounced = queryKey.at(-1);
@@ -43,5 +43,5 @@ export default function useDebounceData(storageKey, queryKey, url, select, stora
     })
 
 
-    return [form, data];
+    return [form, data, isFetching];
 }

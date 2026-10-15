@@ -16,8 +16,10 @@ export async function login(request) {
         try {
             user = await loginAction({ identity, sql, body });
         } catch (e) {
-            return NextResponse.json({}, { status: 401, statusText: 'Inactive User' });
+            const errorText = e.code ? `SQL Error ${e.code}` : `Authentication Error`;
+            return NextResponse.json({}, { status: 401, statusText: errorText });
         }
+
 
         const sessionCookie = await auth.createSessionCookie(token, {
             expiresIn: 60 * 60 * 24 * 5 * 1000, // 5 days

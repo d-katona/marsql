@@ -29,6 +29,7 @@ export default function Input({
         <form.Field name={name}>
             {(field) => {
                 const { value, meta } = field.state;
+                // !meta.isValid && meta.isTouched consider
                 return (
                     <Field data-invalid={!meta.isValid} className={clsx(className)} style={styles}>
                         {label ?

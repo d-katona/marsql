@@ -13,7 +13,7 @@ export default function Submit({ form, del }) {
                 <>
                     {/* <Separator className="my-2" /> */}
                     <AreYouSure open={open} setOpen={setOpen} del={del} />
-                    <div className="flex gap-x-[0.5rem] pb-1">
+                    <div className="flex gap-x-[0.5rem]">
                         <Button disabled={!state.isDirty || !state.isValid} type="button" variant="ghost" className="" onClick={() => form.handleSubmit()}>
                             <IconDeviceFloppy data-icon="inline-start" />
                             Save

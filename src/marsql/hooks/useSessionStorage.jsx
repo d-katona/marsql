@@ -6,7 +6,7 @@ export default function useSessionStorage(path) {
 
     const [storage] = useState(() => {
         console.log('storage')
-        return JSON.parse(sessionStorage.getItem(`q_${path}`)) ?? null;
+        return JSON.parse(sessionStorage.getItem(`q_${path}`)) ?? {};
         // it was {}, but trying null instead
     })
 
